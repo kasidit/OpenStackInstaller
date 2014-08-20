@@ -1,0 +1,124 @@
+<html>
+<head>
+    <link rel="stylesheet" href="openstack-install-env.css">
+    <script src="openstack-install-env.js"></script>
+</head>
+<body>
+  <p>A form to help configure input parameter values for the vasabilab's OpenStack installation script. 
+<button id="create">Create paramrc file</button> 
+<a download="install-paramrc.sh" id="downloadlink" style="display: none">Download</a>
+<hr>
+<p>Copyright 2014 Kasidit Chanchio, <a href="http://vasabilab.cs.tu.ac.th">vasabilab</a>, Thammasat University.</p> 
+<hr>
+  </p>
+  <div id="openstackhosts">
+    <section id="gatewaybox">
+        <p align="center">
+        simulated gateway<br> 
+        and vpn server
+        </p>
+        <div id="outternetworkbox">
+          </p>
+          <p> <b>eth0:</b> ip connecting to internet. <br> 
+          <form>
+            <p> Domain Name:  <input type="text" id="DomainName" value="openstackcloud.com"></p>
+            <p> Intranet configuration<br> 
+                CIDR: <input type="text" id="NatIntranetCidr" value="10.0.0.0\\/24"> <br> 
+                <i>e.g. 10.0.0.0\\/24 = 10.0.0.0/24 <br>
+                need to follow the left-hand  <br>
+                side format.</i></p>
+            <p> VPN configuration<br> 
+                ip range: <input type="text" id="VpnIpRange" value="10.0.0.245-254"></p>
+            <p> Ubuntu Repository Locations: <br>
+                package: <input type="text" id="LocalRepo" value="jp.archive.ubuntu.com"> <br>
+                security: <input type="text" id="LocalSecurityRepo" value="security.ubuntu.com"> <br><i>Recommend using a local mirror.</i></p>
+          </form>
+          </p>
+        </div>
+        <div id="managementnetworkbox">
+          <form>
+            <p> <b>eth1:</b> Management Network </p>
+            <p> ip: <input type="text" id="GatewayIp" value="10.0.0.1"></p>
+            <p> netmask: <input type="text" id="ManagementNetworkNetmask" value="255.255.255.0"></p>
+            <p> network: <input type="text" id="ManagementNetwork" value="10.0.0.0"></p>
+            <p> broadcast: <input type="text" id="BroadcastAddress" value="10.0.0.255"></p>
+            <p> dns: <input type="text" id="DnsIp" value="8.8.8.8"></p>
+          </form>
+        </div>
+    </section>
+    <section id="controllerbox">
+        <p align="center">
+        OpenStack<br>
+	controller
+        </p>
+        <div id="nothingbox1">
+          </p>
+          <p> two lines of <br> nothing </p>
+        </div>
+        <div id="managementnetworkbox">
+          <form>
+            <p> <b>eth0:</b> Management Network </p>
+            <p> ip: <input type="text" id="ControllerIp" value="10.0.0.11"> <br> </p>
+          </form>
+        </div>
+    </section>
+    <section id="networkbox">
+        <p align="center">
+        OpenStack<br>
+        network
+        </p>
+        <div id="nothingbox1">
+          </p>
+          <p> two lines of <br> nothing </p>
+        </div>
+        <div id="managementnetworkbox">
+          <form>
+            <p> <b>eth0:</b> Management Network </p>
+            <p> ip: <input type="text" id="NetworkIp" value="10.0.0.21"><br></p>
+          </form>
+        </div>
+        <div id="datanetworkbox">
+          <form>
+            <p> <b>eth1:</b> Data Tunnel Network </p>
+            <p> ip: <input type="text" id="DataTunnelNetworkNodeIp" value="10.0.1.21"></p>
+            <p> netmask: <input type="text" id="DataNetworkNetmask" value="255.255.255.0"></p>
+            <p> network: <input type="text" id="DataNetworkAddress" value="10.0.1.0"></p>
+          </form>
+        </div>
+        <div id="externalnetworkbox">
+          </p>
+          <form>
+            <p> <b>eth2:</b> External Network </p>
+            <p> Initail External Network<br>
+                CIDR: <input type="text" id="ExternalCidr" value="10.0.0.0\\/24"></p>
+            <p> Floating IPs<br> 
+                start: <input type="text" id="StartFloatingIp" value="10.0.0.100"><br>
+                end: <input type="text" id="EndFloatingIp" value="10.0.0.200"></p>
+          </form>
+        </div>
+    </section>
+    <section id="computebox">
+        <p align="center">
+        OpenStack<br>
+        compute
+        </p>
+        <div id="nothingbox1">
+          </p>
+          <p> two lines of <br> nothing </p>
+        </div>
+        <div id="managementnetworkbox">
+          <form>
+            <p> <b>eth0:</b> Management Network </p>
+            <p> ip: <input type="text" id="ComputeIp" value="10.0.0.31"> <br> </p>
+          </form>
+        </div>
+        <div id="datanetworkbox">
+          <form>
+            <p> <b>eth1:</b> Data tunnel Network </p>
+            <p> ip: <input type="text" id="DataTunnelComputeNodeIp" value="10.0.1.31"></p>
+          </form>
+        </div>
+    </section>
+  </div>
+</body>
+</html>

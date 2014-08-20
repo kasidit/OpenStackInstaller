@@ -1,0 +1,83 @@
+body{
+  width:1100px;
+}
+
+#openstackhosts{
+  float: left;
+}
+
+#gatewaybox{
+  float:left;
+  font-family:"arial";
+  font-size:16px;
+  padding:10px;
+  margin-left:10px;
+  border:3px solid red;
+}
+
+#controllerbox{
+  float:left;
+  font-family:"arial";
+  font-size:16px;
+  padding:10px;
+  margin-left:10px;
+  border:3px solid red;
+}
+
+#networkbox{
+  float:left;
+  font-family:"arial";
+  font-size:16px;
+  padding:10px;
+  margin-left:10px;
+  border:3px solid red;
+}
+
+#computebox{
+  float:left;
+  font-family:"arial";
+  font-size:16px;
+  padding:10px;
+  margin-left:10px;
+  border:3px solid red;
+}
+
+#outternetworkbox{
+  float:center;
+  padding:5px;
+  margin-top:5px;
+  background-color:beige;
+  border:3px solid grey;
+}
+
+#externalnetworkbox{
+  float:center;
+  padding:5px;
+  margin-top:5px;
+  background-color:lightcyan;
+  border:3px solid darkblue;
+}
+
+#nothingbox1{
+  color: white;
+  float:center;
+  padding:5px;
+  margin-top:5px;
+  border:3px solid white;
+}
+
+#managementnetworkbox{
+  float:center;
+  padding:5px;
+  margin-top:5px;
+  background-color:lightgreen;
+  border:3px solid green;
+}
+
+#datanetworkbox{
+  float:center;
+  padding:5px;
+  margin-top:5px;
+  background-color:gold;
+  border:3px solid orange;
+}

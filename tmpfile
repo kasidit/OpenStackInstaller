@@ -1,0 +1,1 @@
+OPSInstaller/gateway/preinstall01-SUDO-set-gateway-pptp.sh:21:echo "ms-dns 8.8.8.8" >> /etc/ppp/pptpd-options
