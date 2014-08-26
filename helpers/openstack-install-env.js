@@ -38,6 +38,8 @@ function writeparams() {
       alltext = alltext.concat("export OPS_MYSQL_PASS=yourpassword\r\n"); 
       alltext = alltext.concat("export DEMO_PASS=yourDemoUserPassword\r\n"); 
       alltext = alltext.concat("export ADMIN_PASS=yourAdminUserPassword\r\n"); 
+      alltext = alltext.concat("export VPN_USERNAME=yourVpnUsername\r\n"); 
+      alltext = alltext.concat("export VPN_PASSWORD=yourVpnPassword\r\n"); 
       alltext = alltext.concat("export HYPERVISOR=qemu\r\n"); 
       alltext = alltext.concat("export INIT_IMAGE_LOCATION=http:\\\\/\\\\/cdn.download.cirros-cloud.net\\\\/0.3.2\\\\/cirros-0.3.2-x86_64-disk.img\r\n"); 
       alltext = alltext.concat("#export INIT_IMAGE_LOCATION=http:\\\\/\\\\/localrepo\\\\/images\\\\/cirros-0.3.2-x86_64-disk.img\r\n"); 

@@ -14,6 +14,8 @@
 export OPS_MYSQL_PASS=yourPassword
 export DEMO_PASS=yourDemoUserPassword
 export ADMIN_PASS=yourAdminUserPassword
+export VPN_USERNAME=yourVpnUsername
+export VPN_PASSWORD=yourVpnPassword
 export HYPERVISOR=qemu
 export INIT_IMAGE_LOCATION=http:\\/\\/cdn.download.cirros-cloud.net\\/0.3.2\\/cirros-0.3.2-x86_64-disk.img
 #export INIT_IMAGE_LOCATION=http:\\/\\/localrepo\\/images\\/cirros-0.3.2-x86_64-disk.img

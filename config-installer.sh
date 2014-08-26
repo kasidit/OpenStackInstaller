@@ -9,6 +9,8 @@
 #
 . ./install-paramrc.sh
 #
+export ORIVPN_USERNAME=vasabi-1234vpn_username4321-ibasav
+export ORIVPN_PASSWORD=vasabi-1234vpn_password4321-ibasav
 export ORIHYPERVISOR=vasabi-1234hypervisor4321-ibasav
 export ORIINIT_IMAGE_LOCATION=vasabi-1234init_image_location4321-ibasav
 export ORIINIT_IMAGE_NAME=vasabi-1234init_image_name4321-ibasav
@@ -55,6 +57,46 @@ read varkey
 #
 ETC_FILES=OPSInstaller/*/files/*
 SCRIPT_FILES=OPSInstaller/*/*.sh
+#
+# Change VPN_USERNAME 
+#
+CHANGETOPIC=VPN_USERNAME
+#
+printf "\npress to continue\n"
+read varkey
+printf "\n----------\n"
+grep -n "${ORIVPN_USERNAME}" ${ETC_FILES} | tee ./tmpfile ; wc -l ./tmpfile
+printf "\n\n${CHANGETOPIC} (in etc files) changed to\n\n"
+sed -i "s/${ORIVPN_USERNAME}/${VPN_USERNAME}/g" ${ETC_FILES}
+grep -n "${VPN_USERNAME}"  ${ETC_FILES}  | tee ./tmpfile ; wc -l ./tmpfile 
+#
+printf "\npress to continue\n"
+read varkey
+printf "\n----------\n"
+grep -n "${ORIVPN_USERNAME}" ${SCRIPT_FILES} | tee ./tmpfile ; wc -l ./tmpfile
+printf "\n\n${CHANGETOPIC} changed to\n\n"
+sed -i "s/${ORIVPN_USERNAME}/${VPN_USERNAME}/g" ${SCRIPT_FILES}
+grep -n "${VPN_USERNAME}" ${SCRIPT_FILES}  | tee ./tmpfile ; wc -l ./tmpfile 
+#
+# Change VPN_PASSWORD 
+#
+CHANGETOPIC=VPN_PASSWORD
+#
+printf "\npress to continue\n"
+read varkey
+printf "\n----------\n"
+grep -n "${ORIVPN_PASSWORD}" ${ETC_FILES} | tee ./tmpfile ; wc -l ./tmpfile
+printf "\n\n${CHANGETOPIC} (in etc files) changed to\n\n"
+sed -i "s/${ORIVPN_PASSWORD}/${VPN_PASSWORD}/g" ${ETC_FILES}
+grep -n "${VPN_PASSWORD}"  ${ETC_FILES}  | tee ./tmpfile ; wc -l ./tmpfile 
+#
+printf "\npress to continue\n"
+read varkey
+printf "\n----------\n"
+grep -n "${ORIVPN_PASSWORD}" ${SCRIPT_FILES} | tee ./tmpfile ; wc -l ./tmpfile
+printf "\n\n${CHANGETOPIC} changed to\n\n"
+sed -i "s/${ORIVPN_PASSWORD}/${VPN_PASSWORD}/g" ${SCRIPT_FILES}
+grep -n "${VPN_PASSWORD}" ${SCRIPT_FILES}  | tee ./tmpfile ; wc -l ./tmpfile 
 #
 # Change HYPERVISOR 
 #
