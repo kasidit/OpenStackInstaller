@@ -14,5 +14,9 @@ including:
 Contact: kasiditchanchio@gmail.com
 
 Note: This script is written for education purpose. 
-For more information, please consult the official 
-OpenStack installation website.
+For more information, please consult the following 
+documents: 
+
+1. http://vasabilab.cs.tu.ac.th/projects/OpenStackIcehouseInstall.pdf 
+2. http://docs.openstack.org/icehouse/install-guide/install/apt/content/
+ 
